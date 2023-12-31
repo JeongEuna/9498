@@ -7,8 +7,16 @@
 
 #include <iostream>
 
-int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
-    return 0;
+int main() {
+    // problem 2753 for testing
+    int year;
+    do {
+        std::cin >> year;
+    } while (year < 1 || year > 4000);
+    
+    if ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0) {
+        std::cout << "1" << '\n';
+    }
+    else
+        std::cout << "0" << '\n';
 }
